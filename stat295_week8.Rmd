@@ -1,0 +1,99 @@
+---
+title: "STAT295"
+author: "Başak Uğurlu"
+date: "2024-04-15"
+output: 
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Intro to R Markdown
+
+## R Markdown
+
+This is an `R Markdown` document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r cars 2}
+summary(cars)
+```
+
+# hello
+
+you can embed plots
+
+```{r press, echo=FALSE}
+plot(pressure)
+
+```
+
+1.  l
+
+2.  k
+
+3.  m
+
+4.  cute
+
+### Format
+
+superscript: 2^nd^
+
+subscript: CO~2~
+
+strike through: ~~mistake~~
+
+```{r read-gapminder,eval=FALSE,echo=FALSE}
+gap<-read.csv("gapminder.csv")
+```
+
+### code chunk options
+
+```{r,warning=FALSE,include=TRUE,echo=FALSE}
+sqrt(-1)
+data <- CO2
+
+```
+
+### inline codes
+
+adding inline codes `r sqrt(25)` and `r nrow(data)` and `r ncol(data)` , variables are \`r names(data)
+
+## Tables
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+|      |      |      |
+|      |      |      |
+|      |      |      |
+
+: captioncaptioncaption
+
+```{r mytable1}
+
+top<-head(CO2)
+knitr::kable(CO2)
+knitr::kable(top,
+             caption="captioncaption")
+```
+
+to cite a table we can use [Table\@ref](mailto:Table@ref){.email}(tab:mytable1)
